@@ -21,13 +21,11 @@ namespace IngaDev.Infra.Mapping
                 .HasColumnType("varchar(512)")
                 .IsRequired();
             builder.Property(p => p.CreatedAt)
-                .HasColumnType("DateTime")
-                .HasDefaultValue("now()")
-                . IsRequired();
+                .HasColumnType("DATETIME");
             builder.Property(p => p.UpdatedAt)
-                .HasColumnType("Datetime");
+                .HasColumnType("DATETIME");
             builder.Property(p => p.DeletedAt)
-                .HasColumnType("DateTime");
+                .HasColumnType("DATETIME");
 
             builder.HasData(new User
             {
