@@ -26,6 +26,7 @@ namespace IngaDev.Infra.Mapping
                 .HasColumnType("DATETIME");
             builder.Property(p => p.DeletedAt)
                 .HasColumnType("DATETIME");
+            builder.ToTable("Users");
 
             builder.HasData(new User
             {
