@@ -34,7 +34,7 @@ namespace IngaDev.Infra.Repositorys
             {
                 throw new ArgumentNullException($"A entidade com o id: {id} não foi  encontrada no banco de dados");
             }
-            entity.Ative = false;
+            entity.Active = false;
             entity.DeletedAt = DateTime.Now;
 
             _context.Entry(entity).State = EntityState.Modified;

@@ -33,7 +33,9 @@ namespace IngaDev.Infra.Mapping
                 Id = Guid.NewGuid(),
                 UserName = "Adminitrador",
                 Password = "password",
-                
+                CreatedAt = DateTime.Now,
+                Active = true
+
             });
         }
     }

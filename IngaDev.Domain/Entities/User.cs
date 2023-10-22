@@ -5,7 +5,6 @@ namespace IngaDev.Domain.Entities
     {
         private string _Password { get; set; }
         public string UserName { get; set; }
-        public bool Ativo { get; set; }
         public string Password { get => _Password; set => _Password = BC.HashPassword(value); }
 
         public bool VerifyPassword(string senha) => BC.Verify(senha, _Password);
